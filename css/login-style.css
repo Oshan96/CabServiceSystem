@@ -1,0 +1,27 @@
+#content-container {
+    background-color: #2d3339
+}
+
+#content-container h1{
+    font-family: 'Titillium Web';
+    color: #f7b731;
+}
+
+.row-container {
+    width: 400px;
+    height: 400px;
+    padding: 70px 50px 50px 50px;
+}
+
+input[type=text], input[type=password] {
+    width: 300px;
+    color:white;
+}
+
+.col-12 {
+    text-align: center;
+}
+
+.row {
+    padding: 7px;
+}
