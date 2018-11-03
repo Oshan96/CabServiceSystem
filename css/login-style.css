@@ -1,5 +1,5 @@
 #content-container {
-    background-color: #2d3339
+    background-color: #2d3339;
 }
 
 #content-container h1{
@@ -7,7 +7,7 @@
     color: #f7b731;
 }
 
-.row-container {
+.row-container-flex {
     width: 400px;
     height: 400px;
     padding: 70px 50px 50px 50px;
