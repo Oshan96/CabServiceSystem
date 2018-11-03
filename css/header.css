@@ -1,0 +1,24 @@
+#banner {
+    background-image: url("./../images/header-img.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+}
+
+#navbar {
+    position: fixed;
+    top: -50px;
+    transition: top 0.3s;
+    background-color: #2d3339;
+}
+
+/* #navbar #button-container {
+    
+} */
+
+#navbar #button-container > .button-bg{
+    float: right;
+    border-radius: 0;
+    background-color: transparent;
+}
+

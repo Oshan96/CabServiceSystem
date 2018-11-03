@@ -6,6 +6,9 @@
   *:focus {
     outline: none; }
 
+body {
+  margin: 0; }
+
 .row > .col-1, #header > .col-1 {
   width: 8.33%;
   padding: 2px 2px;
@@ -94,7 +97,8 @@
   .button:hover, .button-bg:hover, .button:active, .button-bg:active {
     border-color: #f7b731;
     color: #f7b731;
-    background-color: white; }
+    background-color: white;
+    cursor: pointer; }
   @media screen and (max-width: 600px) {
     .button, .button-bg {
       font-size: 15px; } }

@@ -36,6 +36,10 @@ $columns: (
     }
 }
 
+body {
+    margin: 0;
+}
+
 @each $column, $width in $columns {
     .row > .col-#{$column} {
         width: $width;
@@ -64,6 +68,7 @@ $columns: (
         border-color: $basic_button_hover_color;
         color: $basic_button_background_color;
         background-color: $basic_button_font_color;
+        cursor: pointer;
     }
 
     @media screen and (max-width:600px) {

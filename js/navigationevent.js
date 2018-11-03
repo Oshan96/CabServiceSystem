@@ -17,3 +17,16 @@ function executeEvent() {
     isShown = !isShown
 
 }
+
+window.onscroll = function() {
+    var height = document.getElementById("navbar").style.height;
+    scrollFunction(height);
+};
+
+function scrollFunction(height) {
+  if (document.body.scrollTop > height || document.documentElement.scrollTop > height) {
+    document.getElementById("navbar").style.top = "0";
+  } else {
+    document.getElementById("navbar").style.top = "-50px";
+  }
+}
