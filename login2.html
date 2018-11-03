@@ -4,16 +4,18 @@
         <title>Login</title>
         <link type="text/css" rel="stylesheet" href="./css/basic-style.css">
         <link type="text/css" rel="stylesheet" href="./css/login-style.css">
+
+        <script type="text/javascript" src="./js/navigationevent.js"></script>
     </head>
 
     <body>
 
         <div class="row-container-flex">
             <div class="row-flex">
-                <div class="col-5 login image-container">
+                <div class="col-5 login image-container" id="first">
                     <div class="row-container-flex" id="content-container" style="background-color: #2d3339;">
                         <div class="row-flex">
-                            <div class="col-12">
+                            <div class="col-12 title">
                                 <h1>Login to (TAXI)</h1>
                             </div>
                         </div>
@@ -31,14 +33,14 @@
                         </div>
             
                         <div class="row-flex">
-                            <div class="col-12" style="padding-right:50px; padding-top: 20px; text-align: right;">
+                            <div class="col-12 align-right">
                                 <button class="button-bg">Login</button>
                             </div>
                         </div>
                     </div>
                 </div>
 
-                <div class="col-7"></div>
+                <div class="col-7" id="second" onclick="executeEvent()"></div>
             </div>
            
         </div>
