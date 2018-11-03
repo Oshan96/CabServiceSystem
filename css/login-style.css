@@ -1,5 +1,24 @@
+.image-container {
+    background-image: url('./../images/Taxi-photo-2.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 100%;
+    width: 100%;
+}
+
+body {
+    margin:0;
+}
+
 #content-container {
-    background-color: #2d3339;
+    background-color: #2d333988;
+    width: 400px;
+    height: 400px;
+    padding: 70px 50px 50px 50px;
+    -webkit-box-shadow: 4px 6px 40px -4px rgba(0,0,0,0.75);
+    -moz-box-shadow: 4px 6px 40px -4px rgba(0,0,0,0.75);
+    box-shadow: 4px 6px 40px -4px rgba(0,0,0,0.75);
 }
 
 #content-container h1{
@@ -7,10 +26,20 @@
     color: #f7b731;
 }
 
-.row-container-flex {
+/* .row-container-flex {
     width: 400px;
     height: 400px;
     padding: 70px 50px 50px 50px;
+} */
+
+.row-flex {
+    height: 100%;
+}
+
+.row-flex > .login {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 input[type=text], input[type=password] {
@@ -21,6 +50,7 @@ input[type=text], input[type=password] {
 .col-12 {
     text-align: center;
 }
+
 
 .row {
     padding: 7px;
