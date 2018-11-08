@@ -12,18 +12,19 @@
   </head>
   <body>
 
+  <!-- Side Bar Heading Box -->
     <div class="navigation-left">
       <div class="header-box">
-        <div class="toggle">
+        <div id="toggle">
           <i class="fa fa-align-justify"></i>
         </div>
-        <div class="navigation-left-title">
+        <div id="navigation-left-title">
           <h1>Admin Panel</h1>
         </div>
 
       </div>
 
-
+  <!-- Side Bar Items -->
         <div class="navigation-left-items">
           <div class="button-bg"><i class="fa fa-tachometer" aria-hidden="true"></i><small>Dashboard</small></div>
         </div>
@@ -56,11 +57,17 @@
         </div>
     </div>
 
-    <div class="content-right">
-      <div class="content-right-header-box">
-        <input type="search" name="" placeholder="search">
-      </div>
+    <!-- Right Bar Heading Box -->
+    <div class="content-right-header-box">
+        <ul class="nav-items">
+          <li><input type="search" name="" placeholder="search"></li>
+          <li>Home</li>
+          <li><i class="fa fa-bell"></i></li>
+          <li><i class="fa fa-user-circle"></i></li>
+        </ul>
     </div>
 
+
+  <script src="./js/admin.js"></script>
   </body>
 </html>
