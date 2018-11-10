@@ -8,7 +8,7 @@ body{
 
 /* -----------------Styling Left and Right------------------ */
 #left{
-  background-color: #41495C;
+  background-color: #2D3339;
   height: 100vh;
   overflow: visible;
   flex: 1;
@@ -39,7 +39,7 @@ body{
   display: flex;
   flex-direction: row;
   text-align: center;
-  background-color: #FFD777;
+  background-color: #F7B731;
   padding: 10px 10px;
 }
 
@@ -54,7 +54,7 @@ body{
   font-size: 10px;
   text-transform: uppercase;
   height: 100%;
-  color: #0483B0;
+  color: #2D3339;
 }
 
 .left-header-title h1{
@@ -65,7 +65,7 @@ body{
 #right-header{
   width: 100%;
   height: 40px;
-  background-color: #FFD777;
+  background-color: #F7B731;
   color: #0483B0;
 
 }
@@ -76,11 +76,7 @@ body{
   justify-content: flex-end;
 }
 .nav-items li{
-  padding:  10px 15px;
-}
-
-.nav-items li:hover{
-  background-color: #67DFF0;
+  padding:  8px 15px;
 }
 
 
@@ -122,11 +118,9 @@ body{
   padding-left: 10px;
 }
 
-.left-nav-items:hover{
-    background-color: #67DFF0;
-}
+
 #toggle-icon:hover{
-  color: #67DFF0;
+  color: #fff;
 }
 
 /*------------------ Left Contents Toggle View---------------------*/
@@ -158,10 +152,6 @@ body{
   display: flex;
 }
 
-.left-nav-items-small:hover{
-    background-color: #67DFF0;
-}
-
 #togglesmall:hover{
-  color: #67DFF0;
+  color: #fff;
 }
