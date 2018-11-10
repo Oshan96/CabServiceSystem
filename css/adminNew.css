@@ -39,7 +39,7 @@ body{
   display: flex;
   flex-direction: row;
   text-align: center;
-  background-color: #F7B731;
+  background-color:  #2D3339;
   padding: 10px 10px;
 }
 
@@ -47,6 +47,7 @@ body{
   width: 10%;
   height: 100%;
   flex: 1;
+  color: #F7B731;
 }
 
 .left-header-title{
@@ -54,7 +55,7 @@ body{
   font-size: 10px;
   text-transform: uppercase;
   height: 100%;
-  color: #2D3339;
+  color: #ffffff;
 }
 
 .left-header-title h1{
@@ -65,7 +66,7 @@ body{
 #right-header{
   width: 100%;
   height: 40px;
-  background-color: #F7B731;
+  background-color: #2D3339;
   color: #0483B0;
 
 }
@@ -103,7 +104,7 @@ body{
 }
 .left-contents-large{
   margin: 0 auto;
-  width: 80%;
+  width: 100%;
   color: #fff;
 
 }
@@ -119,7 +120,7 @@ body{
 }
 
 
-#toggle-icon:hover{
+#toggle-icon:hover, .fa-user-circle:hover, .fa-bell:hover, .fa-align-justify:hover{
   color: #fff;
 }
 
@@ -155,3 +156,24 @@ body{
 #togglesmall:hover{
   color: #fff;
 }
+
+.fa-bell, .fa-user-circle, .fa-align-justify {
+  color:  #F7B731;
+}
+
+input[type=search], input[type=text], input[type=password] {
+  color: white;
+}
+
+.button-bg {
+  background-color: transparent;
+  border-radius: 0;
+  width: 100%;
+  /* padding-bottom: 2px; */
+}
+
+.button-bg:hover {
+  background-color: transparent;
+  /* padding-bottom: 2px; */
+}
+
