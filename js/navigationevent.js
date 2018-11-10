@@ -26,7 +26,9 @@ window.onscroll = function() {
 function scrollFunction(height) {
   if (document.body.scrollTop > height || document.documentElement.scrollTop > height) {
     document.getElementById("navbar").style.top = "0";
+    document.getElementById("navbar").style.backgroundColor = "#2d3339";
   } else {
-    document.getElementById("navbar").style.top = "-50px";
+    document.getElementById("navbar").style.top = "0px";
+    document.getElementById("navbar").style.backgroundColor = "transparent";
   }
 }

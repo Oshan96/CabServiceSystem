@@ -7,9 +7,10 @@
 
 #navbar {
     position: fixed;
-    top: -50px;
+    top: 0px;
     transition: top 0.3s;
-    background-color: #2d3339;
+    /* background-color: #2d3339; */
+    background-color: transparent;
 }
 
 /* #navbar #button-container {
@@ -20,5 +21,29 @@
     float: right;
     border-radius: 0;
     background-color: transparent;
+    position: relative;
+    border: none;
 }
+
+#navbar #button-container > .button-bg:hover::after {
+    content: '';
+    position: absolute;
+    width: 10px;
+    background-image: url('./../images/svg/right-arrow-hover.svg');
+    background-repeat: no-repeat;
+    background-size: contain;
+    top: 40%;
+    /* background-size: cover; */
+    /* background-color: red; */
+    right : 0;
+    height: 70%;
+    overflow: hidden;
+}
+
+#navbar #button-container > .button-bg:hover {
+    padding-right: 1.5%;
+    /* border: none; */
+}
+
+
 
