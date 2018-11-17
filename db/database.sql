@@ -86,7 +86,7 @@ INSERT INTO users VALUES(
     'ucsc',
     'UCSC',
     '1963-05-22',
-    '636758756V'
+    '636758756V',
     'customer'
 );
 
