@@ -1,4 +1,5 @@
 <?php
+session_start();
 require './../db/connection.php';       //get the mysql connection (can be used as $connection)
 
 $username = $_POST['username'];
@@ -8,8 +9,9 @@ $query = "SELECT user_role FROM users WHERE username='$username' AND pass='$pass
 $result = $connection->query($query);
 
 if($result) {
-    echo $result->fetch_assoc()['user_role'];
+	$data = $result->fetch_assoc()['user_role'];
+	$_SESSION['user_role'] = $data;
+    echo $data;
 } else {
     echo "";
 }
-

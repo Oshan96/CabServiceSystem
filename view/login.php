@@ -1,3 +1,20 @@
+<?php
+session_start();
+if(isset($_SESSION['user_role'])) {
+    switch($_SESSION['user_role']) {
+        case 'admin':{
+			echo "<script>
+						window.location = './adminNew.html';
+						</script>";
+		} break;
+		default : {
+			echo "<script>
+						window.location = './index.html';
+						</script>";
+		}
+    }
+}
+?>
 <!--DOCTYPE HTML-->
 <html>
     <head>
@@ -70,8 +87,12 @@
                             // alert(reques.responseText)
                             //redirect to relevant page
                             switch(request.responseText) {
-                                case 'admin' : window.location = './adminNew.html';break;   //need to set session
-                                default : window.location = './index.html'      //neet to set session
+                                case 'admin' :{
+                                    window.location = './adminNew.html';
+                                } break;   //need to set session
+                                default : {
+                                    window.location = './index.html';
+                                } 
                             }
                         }else {
                             console.log('user does not exist or wrong credentials');
