@@ -1,0 +1,109 @@
+*{
+  padding: 0;
+  margin: 0;
+
+}
+body{
+  background-color: #F7B731;
+  color: #fff;
+}
+a{
+  text-decoration: none;
+  color: #CCF4FE;
+  padding-left: 15px;
+}
+
+/* ------------ Box ---------------*/
+.signup-box{
+  width: 70%;
+  height: 600px;
+  background: #212F3C;
+  border-radius: 10px;
+
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/*------------ SignUp Title -------------------- */
+.signup-title{
+  padding: 15px 30px;
+  display: flex;
+  justify-content: flex-start;
+  border-bottom: 2px solid #F7B731;
+  margin-bottom: 30px;
+}
+.signup-title-logo{
+  flex-grow: 4;
+  text-transform: uppercase;
+  font-size: 25px;
+  font-weight: bold;
+  color: #F7B731;
+  letter-spacing: 2px;
+}
+.signup-title-login{
+  font-size: 18px;
+
+}
+
+/* -------------SignUp Box Container --------------- */
+.signup-box-container{
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  font-size: 20px;
+}
+
+/*Container Title */
+.signup-box-container-title{
+  width: 100%;
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.signup-box-container-title h1{
+  letter-spacing: 2px;
+  margin-bottom: 8px;
+}
+.signup-box-container-title p{
+  font-size: 16px;
+}
+
+
+
+/*-------------------- Form --------------------------- */
+.form-element{
+  padding-bottom: 12px;
+  display: flex;
+}
+
+.form-element input{
+  width: 180px;
+  margin-left: 15px;
+  padding: 5px 10px;
+  color: #fff;
+}
+.form-element label{
+  flex-grow: 2;
+}
+
+.form-btn{
+  position: absolute;
+  transform: translate(+50%, +50%);
+}
+
+/*--------------- Content Right Side */
+
+.taxi-img{
+  width: 600px;
+  height: 250px;
+}
+
+.tag{
+  margin-top: 20px;
+  text-align: center;
+  font-size: 20px;
+  letter-spacing: 1.5px;
+  color: #CCF4FE;
+}
