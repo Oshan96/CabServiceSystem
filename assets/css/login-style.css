@@ -84,3 +84,22 @@ input[type=text], input[type=password] {
     display: flex;
     flex-direction: row-reverse;
 }
+
+#btnLogin {
+    width: 100%;
+    border-radius: 0;
+    font-size: 25px;
+    padding: 0;
+}
+
+.link {
+    padding:0;
+    text-decoration: none;
+    color: #f7b731;
+    font-family: 'Titillium Web';
+}
+
+.link:hover {
+    filter: brightness(95%);
+    cursor: pointer;
+}

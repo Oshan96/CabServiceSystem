@@ -1,4 +1,9 @@
-<!--DOCTYPE HTML-->
+<?php
+session_start();
+
+?>
+
+<!DOCTYPE HTML>
 <html>
     <head>
         <title>Index</title>
@@ -9,20 +14,11 @@
 
     <body>
 
-        <!-- <div class="row-container">
-                <div id="header">
-                        <div class="col-11" style="background-color:transparent">
-                            <h1 style="color:#f7b731; font-family: 'Titillium Web'">TAXI HEADER</h1>
-                        </div>
-                        <div class="col-1 clearfix">
-                                <button class="button-bg clearfix" style="margin-left: 10px;">Login</button>
-                        </div>
-                </div>
-        </div> -->
-
         <div class="row-container-flex" id="banner">
             <div class="row-flex" id="navbar">
                 <div class="col-12" id="button-container">
+                    <a class="button-bg" id="btnLogout" style="padding-left:20px; display: none;" onclick="logout()">Logout</a>
+                    <a class="button-bg" id="btnLogin" style="padding-left:20px;" onclick="login()">Log in</a>
                     <a class="button-bg">About</a>
                     <a class="button-bg">Services</a>
                     <a class="button-bg">Title 3</a>
@@ -61,7 +57,41 @@
         </div>
         
 
-        
+        <script>
+
+            window.onload = function() {
+                <?php
+                if(isset($_SESSION['user_role'])) {
+                    if(!empty($_SESSION['user_role']) && $_SESSION['user_role'] != 'guest') {
+                    
+                        ?>
+                        document.getElementById("btnLogout").style.display = "inline-block";
+                        document.getElementById("btnLogin").style.display = "none";
+                        <?php       
+                    }
+                }
+                ?>
+            }
+
+            function logout() {
+                <?php
+                session_unset();
+                session_destroy();
+                ?>
+                window.location = "./home.php";
+            }
+
+            function login() {
+                <?php
+                session_unset();
+                ?>
+                window.location = "./login.php";
+            }
+
+            
+
+
+        </script>
 
 
 

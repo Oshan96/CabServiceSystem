@@ -9,7 +9,7 @@ if(isset($_SESSION['user_role'])) {
 		} break;
 		default : {
 			echo "<script>
-						window.location = './index.html';
+						window.location = './home.php';
 						</script>";
 		}
     }
@@ -51,9 +51,16 @@ if(isset($_SESSION['user_role'])) {
             
                         <div class="row-flex">
                             <div class="col-12 align-right">
-                                <button class="button-bg" onclick="verify()">Login</button>
+                                <button class="button-bg" id="btnLogin" onclick="verify()">Login</button>
                             </div>
                         </div>
+
+                        <div class="row-flex">
+                            <div class="col-12 align-right">
+                                <a alt="continue as guest" onclick="guestLogin()" class="link">continue as guest</a>
+                            </div>
+                        </div>
+
                     </div>
                 </div>
 
@@ -91,7 +98,7 @@ if(isset($_SESSION['user_role'])) {
                                     window.location = './adminNew.html';
                                 } break;   //need to set session
                                 default : {
-                                    window.location = './index.html';
+                                    window.location = './home.php';
                                 } 
                             }
                         }else {
@@ -106,6 +113,14 @@ if(isset($_SESSION['user_role'])) {
                 request.open('POST','./../controller/logincontroller.php',true);
                 request.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
                 request.send('username='+username+"&password="+password);
+            }
+
+            function guestLogin() {
+                <?php
+                $_SESSION['user_role'] = 'guest';
+                ?>
+
+                window.location = './home.php';
             }
         </script>
 
