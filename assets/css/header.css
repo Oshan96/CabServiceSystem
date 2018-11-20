@@ -1,5 +1,6 @@
 #banner {
-    background-image: url("./../images/header-img.jpg");
+    background-image: url("./../images/wall1.jpg"), linear-gradient(grey 0%,transparent 3%);
+    background-position: bottom,top;
     background-repeat: no-repeat;
     background-size: cover;
     height: 100vh;
@@ -23,6 +24,7 @@
     background-color: transparent;
     position: relative;
     border: none;
+    font-weight: 500;
 }
 
 #navbar #button-container > .button-bg:hover::after {
@@ -49,6 +51,15 @@
     #navbar #button-container > .button-bg:hover {
         padding-right: 3%;
     }
+}
+
+.nav-logo {
+    background-image: url('./../images/nav-logo.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: 15px;
+    display: none;
+    height: 100%;
 }
 
 

@@ -1,0 +1,39 @@
+section {
+    height: 100vh;
+    padding-top: 60px;
+}
+
+/* images */
+
+.img-section2 {
+    background-image: url("./../images/header-img.jpg")
+} 
+
+.img-section3 {
+    background-image: url("./../images/Taxi-photo-2.jpg")
+}
+
+#typing {
+    text-align: center;
+    color: white;
+    /* text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black; */
+    font-family: 'Titillium Web';
+    font-weight: 550;
+    font-size: 100px;
+}
+
+#typing-row {
+    padding-top: 15vh;
+}
+
+@media screen and (max-width: 800px){
+    #typing {
+        font-size: 50px;
+    }
+}
+
+@media screen and (max-height: 320px) {
+    #typing-row {
+        padding-top: 10vh;
+    }
+}

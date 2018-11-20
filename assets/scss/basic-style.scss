@@ -29,6 +29,10 @@ $columns: (
     src: url(./../fonts/TitilliumWeb-Regular.ttf);
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 * {
     box-sizing: border-box;
     &:focus {
@@ -171,6 +175,14 @@ input[type=text], input[type=password], input[type=search] {
     }
 }
 
+////////////////////////////////////
+.parralax {
+
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
 
 
 

@@ -9,28 +9,41 @@ session_start();
         <title>Index</title>
         <link rel="stylesheet" type="text/css" href="./../assets/css/basic-style.css">
         <link rel="stylesheet" type="text/css" href="./../assets/css/header.css">
+        <link rel="stylesheet" type="text/css" href="./../assets/css/home.css">
         <script type="text/javascript" src="./../assets/js/navigationevent.js"></script>
+        <script type="text/javascript" src="./../assets/js/homecontroller.js"></script>
     </head>
 
     <body>
 
         <div class="row-container-flex" id="banner">
             <div class="row-flex" id="navbar">
-                <div class="col-12" id="button-container">
+                <div class="col-1">
+                    <a href="#banner">
+                        <div class="nav-logo" id="nav_logo"></div>
+                    </a>
+                </div>
+                <div class="col-11" id="button-container">
                     <a class="button-bg" id="btnLogout" style="padding-left:20px; display: none;" onclick="logout()">Logout</a>
                     <a class="button-bg" id="btnLogin" style="padding-left:20px;" onclick="login()">Log in</a>
                     <a class="button-bg">About</a>
                     <a class="button-bg">Services</a>
                     <a class="button-bg">Title 3</a>
                     <a class="button-bg">Title 4</a>
-                    <a class="button-bg">Title 5</a>
-                    <a class="button-bg">Contact Us</a>
+                    <a class="button-bg" href="#section3">Title 5</a>
+                    <a class="button-bg" href="#section2">Contact Us</a>
+                </div>
+            </div>
+
+            <div class="row-flex" id="typing-row">
+                <div class="col-12">
+                    <p id="typing"></p>
                 </div>
             </div>
         </div>
 
 
-        <div class="row-container-flex">
+        <section class="row-container-flex parralax img-section2" id="section2">
             <div class="row-flex">
                 <div class="col-3">
     
@@ -54,7 +67,11 @@ session_start();
                 </div>
                 <!-- <div class="col-2"></div> -->
             </div>
-        </div>
+        </section>
+
+        <section class="img-section3 parralax" id="section3">
+
+        </section>
         
 
         <script>
@@ -71,6 +88,8 @@ session_start();
                     }
                 }
                 ?>
+
+                typewrite();
             }
 
             function logout() {

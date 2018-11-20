@@ -1,6 +1,9 @@
 @font-face {
   font-family: 'Titillium Web';
   src: url(./../fonts/TitilliumWeb-Regular.ttf); }
+html {
+  scroll-behavior: smooth; }
+
 * {
   box-sizing: border-box; }
   *:focus {
@@ -226,5 +229,11 @@ input[type=text], input[type=password], input[type=search] {
   width: 100%;
   padding: 2px 2px;
   height: auto; }
+
+.parralax {
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover; }
 
 /*# sourceMappingURL=basic-style.css.map */
