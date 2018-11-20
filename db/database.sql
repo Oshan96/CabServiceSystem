@@ -18,21 +18,21 @@ CREATE TABLE users (
     dob DATE NOT NULL,
     nic VARCHAR(12) NOT NULL,
     user_role VARCHAR(10) NOT NULL,
-    CONSTRAINT FOREIGN KEY (user_role) REFERENCES roles(user_role)
+    CONSTRAINT FOREIGN KEY (user_role) REFERENCES roles(user_role) ON DELETE CASCADE ON UPDATE CASCADE
 );
 
 CREATE TABLE admins (
-    username VARCHAR(15) PRIMARY KEY REFERENCES users(username)
+    username VARCHAR(15) PRIMARY KEY REFERENCES users(username) ON DELETE CASCADE ON UPDATE CASCADE
 );
 
 CREATE TABLE customer (
-    username VARCHAR(15) PRIMARY KEY REFERENCES users(username),
+    username VARCHAR(15) PRIMARY KEY REFERENCES users(username) ON DELETE CASCADE ON UPDATE CASCADE,
     joined_data DATE NOT NULL,
     reg_status BOOLEAN NOT NULL
 );
 
 CREATE TABLE driver (
-    username VARCHAR(15) PRIMARY KEY REFERENCES users(username),
+    username VARCHAR(15) PRIMARY KEY REFERENCES users(username) ON DELETE CASCADE ON UPDATE CASCADE,
     licence_no VARCHAR(10) NOT NULL,
     licence_exp DATE NOT NULL,
     working_status BOOLEAN NOT NULL
@@ -41,7 +41,9 @@ CREATE TABLE driver (
 CREATE TABLE vehicle (
     vehicle_no VARCHAR(11) PRIMARY KEY,     -- WP-ABC-xxxx pattern
     brand VARCHAR(12) NOT NULL,
-    model VARCHAR(20) NOT NULL
+    model VARCHAR(20) NOT NULL,
+    vehicle_type VARCHAR(20) NOT NULL,
+    no_of_passengers INT NOT NULL
 );
 
 CREATE TABLE booking_details (
@@ -51,9 +53,9 @@ CREATE TABLE booking_details (
     return_date DATE NOT NULL,
     price DECIMAL(7,2) NOT NULL,
     driver_id VARCHAR(15),
-    CONSTRAINT FOREIGN KEY (driver_id) REFERENCES users(username),
-    CONSTRAINT FOREIGN KEY (customer_id) REFERENCES customer(username),
-    CONSTRAINT FOREIGN KEY (vehicle_no) REFERENCES vehicle(vehicle_no),
+    CONSTRAINT FOREIGN KEY (driver_id) REFERENCES users(username) ON DELETE CASCADE ON UPDATE CASCADE,
+    CONSTRAINT FOREIGN KEY (customer_id) REFERENCES customer(username) ON DELETE CASCADE ON UPDATE CASCADE,
+    CONSTRAINT FOREIGN KEY (vehicle_no) REFERENCES vehicle(vehicle_no) ON DELETE CASCADE ON UPDATE CASCADE,
     PRIMARY KEY (customer_id,vehicle_no)
 );
 
