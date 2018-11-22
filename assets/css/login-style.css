@@ -1,10 +1,22 @@
 .image-container {
-    background-image: url('./../images/Taxi-photo-2.jpg');
+    background-image: url('./../images/wall2.jpg');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
     height: 100%;
     width: 100%;
+}
+
+.image-container::before {
+    content:"";
+    opacity: 0.7;
+    z-index: 0;
+    position: absolute;
+    top:0;
+    left: 0;
+    width:100%;
+    height:100%;
+    background: black;
 }
 
 /* #first {
@@ -51,6 +63,7 @@ body {
 } */
 
 .row-flex {
+    z-index: 1;
     height: 100%;
     padding-bottom: 12px;
     overflow: hidden;
@@ -60,6 +73,10 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    border-right-style: solid;
+    border-image: linear-gradient(to bottom,transparent,#f7b731 ,transparent) 1 100%;
+    /* border-image-width: 4px; */
+    border-width: 0 4px 0 0;
 }
 
 input[type=text], input[type=password] {

@@ -27,9 +27,9 @@ if(isset($_SESSION['user_role'])) {
 
     <body>
 
-        <div class="row-container-flex">
+        <div class="row-container-flex image-container">
             <div class="row-flex" style="padding-bottom:0;">
-                <div class="col-5 login image-container" id="first">
+                <div class="col-5 login" id="first">
                     <div class="row-container-flex" id="content-container" style="background-color: #2d3339;">
                         <div class="row-flex">
                             <div class="col-12 title">
