@@ -26,12 +26,12 @@ session_start();
                 <div class="col-11" id="button-container">
                     <a class="button-bg" id="btnLogout" style="padding-left:20px; display: none;" onclick="logout()">Logout</a>
                     <a class="button-bg" id="btnLogin" style="padding-left:20px;" onclick="login()">Log in</a>
-                    <a class="button-bg">About</a>
-                    <a class="button-bg">Services</a>
+                    <a class="button-bg">Help</a>
+                    <a class="button-bg">Contact Us</a>
                     <a class="button-bg">Title 3</a>
                     <a class="button-bg">Title 4</a>
-                    <a class="button-bg" href="#section3">Title 5</a>
-                    <a class="button-bg" href="#section2">Contact Us</a>
+                    <a class="button-bg" href="#section3" id="sec3">Services</a>
+                    <a class="button-bg" href="#section2" id="sec2">About Us</a>
                 </div>
             </div>
 
@@ -44,29 +44,18 @@ session_start();
 
 
         <section class="row-container-flex parralax img-section2" id="section2">
-            <div class="row-flex">
-                <div class="col-3">
-    
+            <div class="row-flex content">
+                <div class="col-12">
+                    <h2>About Us</h2>
                 </div>
-                <div class="col-4"></div>
-                <div class="col-2"></div>
-                <div class="col-2">
-                        <button class="button-bg">Hello There</button>
+                <div class="col-12">
+                    <p>
+                    The pioneer in shaping the cab/taxi service industry in Sri Lanka, Smart Cabs aims to be Sri Lanka’s Number one cab/taxi service in near future. Thus providing complete bouquet of end to end transportation solutions through its fleet of many vehicles varying in a wide range of luxury to semi luxury.
+                    </p>
                 </div>
-                <div class="col-1"></div>
-                <!-- <div class="col-2" style="background-color:slateblue;"></div> -->
+                
             </div>
-            <div class="row-flex">
-                <div class="col-4">
-    
-                </div>
-                <div class="col-2"></div>
-                <div class="col-1"></div>
-                <div class="col-3">
-                        <p>Hello There</p>
-                </div>
-                <!-- <div class="col-2"></div> -->
-            </div>
+           
         </section>
 
         <section class="img-section3 parralax" id="section3">

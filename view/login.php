@@ -33,7 +33,7 @@ if(isset($_SESSION['user_role'])) {
                     <div class="row-container-flex" id="content-container" style="background-color: #2d3339;">
                         <div class="row-flex">
                             <div class="col-12 title">
-                                <h1>Login to (TAXI)</h1>
+                                <h1>Smart Cabs</h1>
                             </div>
                         </div>
             
