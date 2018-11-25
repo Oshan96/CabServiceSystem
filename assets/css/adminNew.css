@@ -5,6 +5,12 @@
 body{
   display: flex;
 }
+a{
+  text-decoration: none;
+}
+a:visited{
+  text-decoration: none;
+}
 
 /* -----------------Styling Left and Right------------------ */
 #left{
@@ -177,3 +183,22 @@ input[type=search], input[type=text], input[type=password] {
   /* padding-bottom: 2px; */
 }
 
+
+
+
+
+
+/**------------------- dashboard_content_box ------------*/
+
+.dashboard_content{
+  margin: 80px 50px;
+  display: grid;
+  grid-template-columns: 500px 500px;
+  grid-template-rows: 250px 250px;
+  grid-gap: 40px;
+}
+
+.dashboard_content_box iframe{
+  width: 500px;
+  height: 250px;
+}

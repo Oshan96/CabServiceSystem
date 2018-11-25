@@ -1,0 +1,34 @@
+.add_user{
+  margin-top: 80px;
+  grid-gap: 10px;
+
+}
+.add_user_form{
+display: flex;
+justify-content: center;
+}
+.add_user_title{
+  text-align: center;
+  margin: 30px;
+}
+
+.add_user_title h1{
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+}
+
+.form-element{
+  display: grid;
+  grid-template-columns: 200px 250px;
+  grid-gap: 20px;
+  margin-bottom: 20px;
+  font-size: 20px;
+}
+
+.form-btn{
+  margin-top: 15px;
+  color: black;
+  background-color: #F7B731;
+  font-weight: bold;
+
+}
