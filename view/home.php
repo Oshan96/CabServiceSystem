@@ -1,5 +1,12 @@
 <?php
 session_start();
+require '../db/connection.php'; 
+
+$queryVehicleTypes='SELECT DISTINCT vehicle_type FROM vehicle';
+$resultVehicleTypes=$connection->query($queryVehicleTypes);
+$dataVehicleTypes=$resultVehicleTypes->fetch_all();
+// var_dump($dataVehicleTypes);
+
 
 ?>
 
@@ -79,7 +86,49 @@ session_start();
            
         </section>
 
-        <section class="img-section3 parralax" id="section3">
+        <section class="row-container-flex img-section3 parralax" id="section3">
+            <div class="row-flex content">
+                <div class="col-6">
+                    <div class="content">
+                        Vehicle Type
+                    </div>
+                </div>
+                <div class="col-6">
+                    <div class="content">
+                        <?php
+                            foreach ($dataVehicleTypes as $data) {
+                                var_dump($data);
+                            }
+                        ?>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row-flex content">
+                <div class="col-6">
+                    <div class="content">
+                        Reservation From
+                    </div>
+                </div>
+                <div class="col-6">
+                    <div class="content">
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="row-flex content">
+                <div class="col-6">
+                    <div class="content">
+                        Reservation Until
+                    </div>
+                </div>
+                <div class="col-6">
+                    <div class="content">
+
+                    </div>
+                </div>
+            </div>
 
         </section>
         
@@ -122,15 +171,6 @@ session_start();
 
         </script>
 
-
-
-
     </body>
-
-
-
-
-
-
 
 </html>

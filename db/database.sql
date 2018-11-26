@@ -43,7 +43,8 @@ CREATE TABLE vehicle (
     brand VARCHAR(12) NOT NULL,
     model VARCHAR(20) NOT NULL,
     vehicle_type VARCHAR(20) NOT NULL,
-    no_of_passengers INT NOT NULL
+    no_of_passengers INT NOT NULL,
+    price DECIMAL(7,2)
 );
 
 CREATE TABLE booking_details (
@@ -98,5 +99,30 @@ INSERT INTO customer VALUES (
     'ucsc',
     '2018-11-14',
     1
+);
+
+INSERT INTO vehicle VALUES (
+    "WP-ABC-2052",
+    "Nissan",
+    "GTR",
+    "Car",
+    2,
+    20000.00
+),
+(
+    "WP-AAA-6754",
+    "Toyota",
+    "Corolla",
+    "Car",
+    4,
+    7000.00
+),
+(
+    "WP-DAA-6754",
+    "Honda",
+    "Vezel",
+    "SUV",
+    4,
+    7000.00
 );
 
