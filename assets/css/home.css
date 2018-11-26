@@ -6,8 +6,23 @@ section {
 /* images */
 
 .img-section2 {
-    background-image: url("./../images/header-img.jpg")
+    height: 100%;
+    background-image: url("./../images/header-img.jpg");
+    position: relative;
+    padding-bottom: 60px;
 } 
+
+.img-section2::after {
+    content: '';
+    position: absolute;
+    top:0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgb(0,0,0,0.8);
+    z-index: 1;
+    overflow: hidden;
+}
 
 .img-section3 {
     background-image: url("./../images/wall2.jpg")
@@ -22,6 +37,7 @@ section {
     font-size: 100px;
 }
 
+
 #typing-row {
     padding-top: 15vh;
 }
@@ -31,6 +47,7 @@ section {
     font-family: "Titillium Web";
     padding-left: 25%;
     padding-right: 25%;
+    z-index: 2;
 }
 
 .content .col-12 {
@@ -40,6 +57,10 @@ section {
 .content .col-12 p {
     text-align: justify;
     font-size: 18px;
+}
+
+.content .heading {
+    padding-top: 15px;
 }
 
 @media screen and (max-width: 800px){

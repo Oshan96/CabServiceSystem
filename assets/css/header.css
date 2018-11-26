@@ -12,13 +12,14 @@
     transition: top 0.3s;
     /* background-color: #2d3339; */
     background-color: transparent;
+    z-index: 4;
 }
 
 /* #navbar #button-container {
     
 } */
 
-#navbar #button-container > .button-bg{
+#navbar #button-container > .button-bg {
     float: right;
     border-radius: 0;
     background-color: transparent;
@@ -45,6 +46,12 @@
 #navbar #button-container > .button-bg:hover {
     padding-right: 1.5%;
     /* border: none; */
+}
+
+.center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 @media screen and (max-width: 600px) {
