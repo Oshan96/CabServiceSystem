@@ -6,7 +6,7 @@
 
     <link rel="stylesheet" href="../css/basic-style.css">
     <link rel="stylesheet" href="../css/adminNew.css">
-  <link rel="stylesheet" href="../css/adduser.css">
+    <link rel="stylesheet" href="../css/registereduser.css">
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
@@ -77,6 +77,42 @@
         </ul>
       </div>
 
+
+
+        <?php
+            $con=mysqli_connect('localhost','root','') or die(mysqli_error());
+            mysqli_select_db($con, 'cabservice') or die("cannot select DB");
+
+            $sql = "SELECT * FROM `customer`";
+            $result = mysqli_query($con,  $sql);
+        ?>
+        <div class="view_user_title">
+          <h1>Registerd User</h1>
+        </div>
+        <div class="view_user">
+          <table class="table">
+            <th>
+              User Name
+            </th>
+            <th>
+              Joined Date
+            </th>
+            <th>
+              Reg Status
+            </th>
+            <?php
+              while ($rowtable = mysqli_fetch_array($result, MYSQLI_ASSOC)) {
+            ?>
+            <tr>
+              <td><?php echo $rowtable['username']; ?> <br/></td>
+              <td><?php echo $rowtable['joined_date']; ?> <br/></td>
+              <td><?php echo $rowtable['reg_status']; ?> <br/></td>
+              </tr>
+              <?php
+              }
+              ?>
+          </table>
+        </div>
 
 
 
