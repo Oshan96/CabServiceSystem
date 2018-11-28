@@ -10,6 +10,13 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
   </head>
+
+  <style>
+    a{
+      text-decoration: none;
+    }
+  </style>
+
   <body>
 
   <!-- Left Side -->
@@ -21,7 +28,7 @@
         </div>
 
         <div class="left-header-title">
-          <h1>Admin Panel</h1>
+          <a href="#"><h1>Admin Panel</h1></a>
         </div>
       </div> <!-- End Left Header -->
 
@@ -31,10 +38,10 @@
       </div>
 
       <div class="left-contents-large">
-          <a href="#" class="left-nav-items button-bg"><i class="fa fa-tachometer"></i><p>Dashboard</p></a>
-          <a href="../assets/pages/adduser.html" class="left-nav-items button-bg"><i class="fa fa-tachometer"></i><p>Add User</p></a>
-          <a href="../assets/pages/removeuser.html" class="left-nav-items button-bg"><i class="fa fa-tachometer"></i><p>Remove User</p></a>
-          <a href="../assets/pages/viewuser.html" class="left-nav-items button-bg"><i class="fa fa-tachometer"></i><p>Registered User</p></a>
+          <a href="../assets/pages/adduser.php" class="left-nav-items button-bg"><i class="fa fa-tachometer"></i><p>Add User</p></a>
+          <a href="../assets/pages/removeuser.php" class="left-nav-items button-bg"><i class="fa fa-tachometer"></i><p>Remove User</p></a>
+          <a href="../assets/pages/updateuser.php" class="left-nav-items button-bg"><i class="fa fa-tachometer"></i><p>Update User</p></a>
+          <a href="../assets/pages/registereduser.php" class="left-nav-items button-bg"><i class="fa fa-tachometer"></i><p>Registered User</p></a>
       </div>
     </div>
 
@@ -52,10 +59,11 @@
       </div>
 
       <div class="left-contents-large">
-          <a href="#" class="left-nav-items button-bg"><i class="fa fa-tachometer"></i></a>
-          <a href="../assets/pages/adduser.html" class="left-nav-items button-bg"><i class="fa fa-tachometer"></i></a>
-          <a href="../assets/pages/removeuser.html" class="left-nav-items button-bg"><i class="fa fa-tachometer"></i></a>
-          <a href="../assets/pages/viewuser.html" class="left-nav-items button-bg"><i class="fa fa-tachometer"></i></a>
+
+          <a href="../assets/pages/adduser.php" class="left-nav-items button-bg"><i class="fa fa-tachometer"></i></a>
+          <a href="../assets/pages/removeuser.php" class="left-nav-items button-bg"><i class="fa fa-tachometer"></i></a>
+          <a href="../assets/pages/updateuser.php" class="left-nav-items button-bg"><i class="fa fa-tachometer"></i></a>
+          <a href="../assets/pages/registereduser.php" class="left-nav-items button-bg"><i class="fa fa-tachometer"></i></a>
       </div>
 
     </div>
@@ -76,16 +84,16 @@
 
       <div class="dashboard_content">
         <div class="dashboard_content_box">
-          <iframe src="../assets/pages/adduser.html"></iframe>
+          <iframe src="../assets/pages/adduser.php"></iframe>
         </div>
         <div class="dashboard_content_box">
-          <iframe src="../assets/pages/removeuser.html"></iframe>
+          <iframe src="../assets/pages/removeuser.php"></iframe>
         </div>
         <div class="dashboard_content_box">
-          <iframe src="../assets/pages/viewuser.html"></iframe>
+          <iframe src="../assets/pages/viewuser.php"></iframe>
         </div>
         <div class="dashboard_content_box">
-          <iframe src="../assets/pages/adduser.html"></iframe>
+          <iframe src="../assets/pages/updateuser.php"></iframe>
         </div>
       </div>
     </div>

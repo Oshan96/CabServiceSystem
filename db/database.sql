@@ -27,7 +27,7 @@ CREATE TABLE admins (
 
 CREATE TABLE customer (
     username VARCHAR(15) PRIMARY KEY REFERENCES users(username) ON DELETE CASCADE ON UPDATE CASCADE,
-    joined_data DATE NOT NULL,
+    joined_date DATE NOT NULL,
     reg_status BOOLEAN NOT NULL
 );
 
