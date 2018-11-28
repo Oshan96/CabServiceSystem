@@ -12,6 +12,13 @@
 
   </head>
 
+  <style media="screen">
+    .select_box{
+      padding: 5px 5px;
+      font-size: 17px;
+      width: 250px;
+    }
+  </style>
   <body>
 
   <!-- Left Side -->
@@ -87,12 +94,24 @@
 
                 <div class="form-element">
                   <div><label for="name">User Name:</label></div>
-                  <div><input type="text" id="user_name" name="user_name"></div>
+                  <div>
+                    <select name="name" class="select_box">
+                      <option>One</option>
+                      <option>One</option>
+                      <option>One</option>
+                    </select>
+                  </div>
                 </div>
 
                 <div class="form-element">
                   <div><label for="full_name">Full Name:</label></div>
-                  <div><input type="text" id="full_name" name="full_name"></div>
+                  <div>
+                    <select name="full_name" class="select_box">
+                      <option>One</option>
+                      <option>One</option>
+                      <option>One</option>
+                    </select>
+                  </div>
                 </div>
 
                 <button type="submit" name="button" class="button-bg form-btn">Remove User</button>

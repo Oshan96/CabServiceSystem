@@ -12,6 +12,14 @@
 
   </head>
 
+  <style media="screen">
+    .date_box{
+      padding: 5px 5px;
+      font-size: 20px;
+      text-align: center;
+    }
+  </style>
+
   <body>
 
   <!-- Left Side -->
@@ -98,15 +106,25 @@
                 </div>
 
                 <div class="form-element">
+                  <div><label for="pass">Password:</label></div>
+                  <div><input type="password" id="pass" name="pass"></div>
+                </div>
+
+                <div class="form-element">
+                  <div><label for="c_pass"> Confirm Password:</label></div>
+                  <div><input type="password" id="c_pass" name="c_pass"></div>
+                </div>
+
+                <div class="form-element">
                   <div><label for="nic">NIC:</label></div>
                   <div><input type="text" id="nic" name="nic"></div>
                 </div>
 
                 <div class="form-element">
                   <div><label for="dob">D.O.B:</label></div>
-                  <div><input type="date" id="dob" name="dob"></div>
+                  <div><input type="date" id="dob" name="dob" class="date_box"></div>
                 </div>
-
+                
                 <button type="submit" name="button" class="button-bg form-btn">Add User</button>
               </form>
           </div>
