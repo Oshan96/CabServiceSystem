@@ -1,0 +1,6 @@
+{
+    "server":"localhost",
+    "db":"cabService",
+    "username":"root",
+    "password":"root"
+}
