@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
   </head>
+
   <body>
 
   <!-- Left Side -->
@@ -22,7 +23,7 @@
         </div>
 
         <div class="left-header-title">
-          <h1>Admin Panel</h1>
+          <a href="../../view/adminNew.php"><h1>Admin Panel</h1></a>
         </div>
       </div> <!-- End Left Header -->
 
@@ -32,10 +33,10 @@
       </div>
 
       <div class="left-contents-large">
-          <a href="../../view/adminNew.html" class="left-nav-items button-bg"><i class="fa fa-tachometer"></i><p>Dashboard</p></a>
-          <a href="./adduser.html" class="left-nav-items button-bg"><i class="fa fa-tachometer"></i><p>Add User</p></a>
-          <a href="#" class="left-nav-items button-bg"><i class="fa fa-tachometer"></i><p>Remove User</p></a>
-          <a href="./viewuser.html" class="left-nav-items button-bg"><i class="fa fa-tachometer"></i><p>Registered User</p></a>
+          <a href="./adduser.php" class="left-nav-items button-bg"><i class="fa fa-tachometer"></i><p>Add User</p></a>
+          <a href="./removeuser.php" class="left-nav-items button-bg"><i class="fa fa-tachometer"></i><p>Remove User</p></a>
+          <a href="#" class="left-nav-items button-bg"><i class="fa fa-tachometer"></i><p>Update User</p></a>
+          <a href="./registereduser.php" class="left-nav-items button-bg"><i class="fa fa-tachometer"></i><p>Registered User</p></a>
       </div>
 
     </div>
@@ -54,10 +55,10 @@
       </div>
 
       <div class="left-contents-large">
-          <a href="../../view/adminNew.html" class="left-nav-items button-bg"><i class="fa fa-tachometer"></i></a>
-          <a href="./adduser.html" class="left-nav-items button-bg"><i class="fa fa-tachometer"></i></a>
+          <a href="./adduser.php" class="left-nav-items button-bg"><i class="fa fa-tachometer"></i></a>
+          <a href="./removeuser.php" class="left-nav-items button-bg"><i class="fa fa-tachometer"></i></a>
           <a href="#" class="left-nav-items button-bg"><i class="fa fa-tachometer"></i></a>
-          <a href="./viewuser.html" class="left-nav-items button-bg"><i class="fa fa-tachometer"></i></a>
+          <a href="./registereduser.php" class="left-nav-items button-bg"><i class="fa fa-tachometer"></i></a>
       </div>
     </div>
        <!-- End Left-->
@@ -76,27 +77,7 @@
         </ul>
       </div>
 
-      <div class="add_user">
-        <div class="add_user_title">
-            <h1>Remove User</h1>
-        </div>
 
-        <div class="add_user_form">
-            <form action="#" method="post">
-
-                <div class="form-element">
-                  <div><label for="name">User to be Removed:</label></div>
-                  <div><input type="text" id="user_name" name="user_name"></div>
-                </div>
-
-                <button type="submit" name="button" class="button-bg form-btn">Remove User</button>
-              </form>
-          </div>
-
-
-      </div>
-
-    </div>
 
 
   <script src="../js/adminNew.js"></script>
