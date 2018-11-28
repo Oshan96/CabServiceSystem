@@ -1,3 +1,6 @@
+<?php
+require './../../db/connection.php';
+?>
 <!DOCTYPE html>
 <html>
   <head>
@@ -80,11 +83,11 @@
 
 
         <?php
-            $con=mysqli_connect('localhost','root','') or die(mysqli_error());
-            mysqli_select_db($con, 'cabservice') or die("cannot select DB");
+            // $con=mysqli_connect('localhost','root','') or die(mysqli_error());
+            // mysqli_select_db($con, 'cabservice') or die("cannot select DB");
 
-            $sql = "SELECT * FROM `customer`";
-            $result = mysqli_query($con,  $sql);
+            $sql = "SELECT * FROM customer";
+            $result = $connection->query($sql);
         ?>
         <div class="view_user_title">
           <h1>Registerd User</h1>
@@ -101,7 +104,7 @@
               Reg Status
             </th>
             <?php
-              while ($rowtable = mysqli_fetch_array($result, MYSQLI_ASSOC)) {
+              while ($rowtable = $connection->fetch_array($result, MYSQLI_ASSOC)) {
             ?>
             <tr>
               <td><?php echo $rowtable['username']; ?> <br/></td>
