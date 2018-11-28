@@ -2,7 +2,7 @@
 session_start();
 require '../db/connection.php'; 
 
-$queryVehicleTypes='SELECT DISTINCT vehicle_type FROM vehicle';
+$queryVehicleTypes='SELECT vehicle_type, MAX(no_of_passengers) FROM vehicle GROUP BY vehicle_type';
 $resultVehicleTypes=$connection->query($queryVehicleTypes);
 $dataVehicleTypes=$resultVehicleTypes->fetch_all();
 // var_dump($dataVehicleTypes);
@@ -87,53 +87,90 @@ $dataVehicleTypes=$resultVehicleTypes->fetch_all();
         </section>
 
         <section class="row-container-flex img-section3 parralax" id="section3">
-            <div class="row-flex content">
-                <div class="col-6">
-                    <div class="content">
-                        Vehicle Type
+            <div class="content" style="background-color:rgba(0,0,0,0.5)">
+                <form action="../controller/homecontroller.php" method="post">
+                    <div class="row-flex">
+                        <div class="col-6">
+                            <div class="content right" >
+                                Vehicle Type
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="content">
+                                <select name="vehiType" id="vehiType">
+                                    <option value="NULL" disabled selected>Choose a type</option>
+                                    
+                                <?php
+                                    foreach ($dataVehicleTypes as $data) {
+                                ?>
+                                    <option value="<?=$data[0]?>"><?=$data[0]?></option>
+                                <?php                                    
+                                    }
+                                ?>
+                                </select>
+                            </div>
+                        </div>
                     </div>
-                </div>
-                <div class="col-6">
-                    <div class="content">
-                        <?php
-                            foreach ($dataVehicleTypes as $data) {
-                                var_dump($data);
-                            }
-                        ?>
-                    </div>
-                </div>
-            </div>
 
-            <div class="row-flex content">
-                <div class="col-6">
-                    <div class="content">
-                        Reservation From
+                    <div class="row-flex">
+                        <div class="col-6">
+                            <div class="content right">
+                                Max Passenger Count
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="content">
+                                <input type="number" name="passenger-count" id="passenger-count" disabled>
+                            </div>
+                        </div>
                     </div>
-                </div>
-                <div class="col-6">
-                    <div class="content">
 
+                    <div class="row-flex">
+                        <div class="col-6">
+                            <div class="content right">
+                                Reservation From
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="content">
+                                <input type="date" name="time-from" id="time-from">
+                            </div>
+                        </div>
                     </div>
-                </div>
-            </div>
 
-            <div class="row-flex content">
-                <div class="col-6">
-                    <div class="content">
-                        Reservation Until
+                    <div class="row-flex">
+                        <div class="col-6">
+                            <div class="content right">
+                                Reservation Until
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="content">
+                            <input type="date" name="time-to" id="time-to">
+                            </div>
+                        </div>
                     </div>
-                </div>
-                <div class="col-6">
-                    <div class="content">
 
+                    <div class="row-flex content center">
+                        <input type="submit" value="Search" id="search">
+                        <input type="reset" value="Reset" id="reset">
                     </div>
-                </div>
+                </form>
             </div>
 
         </section>
         
 
         <script>
+            var passengers={
+                <?php
+                    foreach ($dataVehicleTypes as $data) {
+                ?>
+                    "<?=$data[0]?>":<?=$data[1]?>,
+                <?php                                    
+                    }
+                ?>
+            }
 
             window.onload = function() {
                 <?php
@@ -166,7 +203,30 @@ $dataVehicleTypes=$resultVehicleTypes->fetch_all();
                 window.location = "./login.php";
             }
 
-            
+            document.getElementById("vehiType").addEventListener("input",function(event) {
+                document.getElementById("passenger-count").outerHTML='<input type="number" name="passenger-count" id="passenger-count" min="1" max="'+passengers[event.target.value]+'" value="'+passengers[event.target.value]+'">';
+            });
+
+            //this is the ajax part
+
+            document.getElementById("search").addEventListener("click",function(event) {
+                event.preventDefault();
+
+                var xmlhttp = new XMLHttpRequest();
+                xmlhttp.onreadystatechange = function() {
+                    if (this.readyState == 4 && this.status == 200) {
+                        console.log(this.responseText);
+                    }
+                };
+                xmlhttp.open("POST", "./../controller/homeController.php", true);
+                xmlhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+                xmlhttp.send("vehiType="+document.getElementById("vehiType").value+
+                "&passenger-count="+document.getElementById("passenger-count").value+
+                "&time-from="+document.getElementById("time-from").value+
+                "&time-to="+document.getElementById("time-to").value);
+
+                document.getElementById("passenger-count").outerHTML='<input type="number" name="passenger-count" id="passenger-count" min="1" max="'+passengers[event.target.value]+'" value="'+passengers[event.target.value]+'">';
+            });
 
 
         </script>

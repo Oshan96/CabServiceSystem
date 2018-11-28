@@ -50,6 +50,16 @@ section {
     z-index: 2;
 }
 
+.content .right{
+    text-align: right
+}
+
+/* .content .center{
+    align-content: center;
+    align-items: center;
+} */
+
+
 .content .col-12 {
     margin: -15px;
 }
