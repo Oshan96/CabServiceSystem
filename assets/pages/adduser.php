@@ -17,7 +17,15 @@
       padding: 5px 5px;
       font-size: 20px;
       text-align: center;
+      width: 250px;
     }
+
+    .select_box{
+        padding: 5px 5px;
+        font-size: 17px;
+        width: 250px;
+      }
+
   </style>
 
   <body>
@@ -121,10 +129,26 @@
                 </div>
 
                 <div class="form-element">
+                  <div><label for="address">Address:</label></div>
+                  <div><input type="text" id="address" name="address"></div>
+                </div>
+
+                <div class="form-element">
                   <div><label for="dob">D.O.B:</label></div>
                   <div><input type="date" id="dob" name="dob" class="date_box"></div>
                 </div>
-                
+
+                <div class="form-element">
+                  <div><label for="name">User Role:</label></div>
+                  <div>
+                    <select name="user_role" class="select_box">
+                      <option>Driver</option>
+                      <option>Customer</option>
+                      <option>Admin</option>
+                    </select>
+                  </div>
+                </div>
+
                 <button type="submit" name="button" class="button-bg form-btn">Add User</button>
               </form>
           </div>

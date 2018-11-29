@@ -1,3 +1,6 @@
+<?php
+
+?>
 <!DOCTYPE html>
 <html>
   <head>
@@ -80,11 +83,11 @@
 
 
         <?php
-            $con=mysqli_connect('localhost','root','root') or die(mysqli_error());
+            $con=mysqli_connect('localhost','root','') or die(mysqli_error());
             mysqli_select_db($con, 'cabservice') or die("cannot select DB");
 
-            $sql = "SELECT * FROM `customer`";
-            $result = mysqli_query($con,  $sql);
+            $sql = "SELECT * FROM users";
+            $result = mysqli_query($con,$sql);
         ?>
         <div class="view_user_title">
           <h1>Registerd User</h1>
@@ -95,18 +98,22 @@
               User Name
             </th>
             <th>
-              Joined Date
+              Full Name
             </th>
             <th>
-              Reg Status
+              Address
+            </th>
+            <th>
+              User Role
             </th>
             <?php
               while ($rowtable = mysqli_fetch_array($result, MYSQLI_ASSOC)) {
             ?>
             <tr>
               <td><?php echo $rowtable['username']; ?> <br/></td>
-              <td><?php echo $rowtable['joined_date']; ?> <br/></td>
-              <td><?php echo $rowtable['reg_status']; ?> <br/></td>
+              <td><?php echo $rowtable['fullname']; ?> <br/></td>
+              <td><?php echo $rowtable['address']; ?> <br/></td>
+              <td><?php echo $rowtable['user_role']; ?> <br/></td>
               </tr>
               <?php
               }

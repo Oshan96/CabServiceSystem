@@ -19,6 +19,7 @@
       width: 250px;
     }
   </style>
+  
   <body>
 
   <!-- Left Side -->
@@ -105,13 +106,7 @@
 
                 <div class="form-element">
                   <div><label for="full_name">Full Name:</label></div>
-                  <div>
-                    <select name="full_name" class="select_box">
-                      <option>One</option>
-                      <option>One</option>
-                      <option>One</option>
-                    </select>
-                  </div>
+                  <div><input type="text" id="full_name" name="full_name" width="300px"></div>
                 </div>
 
                 <button type="submit" name="button" class="button-bg form-btn">Remove User</button>
