@@ -95,16 +95,16 @@ if(!isset($_SESSION['user_role']) || $_SESSION['user_role'] != 'admin') {
 
       <div class="dashboard_content">
         <div class="dashboard_content_box">
-          <iframe src="../assets/pages/adduser.php"></iframe>
+          <iframe src="../assets/pages/adduser.php" scrolling="no"></iframe>
         </div>
         <div class="dashboard_content_box">
-          <iframe src="../assets/pages/removeuser.php"></iframe>
+          <iframe src="../assets/pages/removeuser.php" scrolling="no"></iframe>
         </div>
         <div class="dashboard_content_box">
-          <iframe src="../assets/pages/viewuser.php"></iframe>
+          <iframe src="../assets/pages/registereduser.php" scrolling="no"></iframe>
         </div>
         <div class="dashboard_content_box">
-          <iframe src="../assets/pages/updateuser.php"></iframe>
+          <iframe src="../assets/pages/updateuser.php" scrolling="no"></iframe>
         </div>
       </div>
     </div>
