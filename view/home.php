@@ -35,8 +35,12 @@ $dataVehicleTypes=$resultVehicleTypes->fetch_all();
                     <a class="button-bg" id="btnLogin" style="padding-left:20px;" onclick="login()">Log in</a>
                     <a class="button-bg">Help</a>
                     <a class="button-bg">Contact Us</a>
+                    <!--
+
                     <a class="button-bg">Title 3</a>
                     <a class="button-bg">Title 4</a>
+
+                    -->
                     <a class="button-bg" href="#section3" id="sec3">Reserve Vehicle</a>
                     <a class="button-bg" href="#section2" id="sec2">About Us</a>
                 </div>
@@ -87,7 +91,7 @@ $dataVehicleTypes=$resultVehicleTypes->fetch_all();
         </section>
 
         <section class="row-container-flex img-section3 parralax" id="section3">
-            <div class="content" style="background-color:rgba(0,0,0,0.5)">
+            <div class="content" style="background-color:rgba(0,0,0,0.7); margin-bottom: 20px;">
                 <form action="../controller/homecontroller.php" method="post">
                     <div class="row-flex">
                         <div class="col-6">
@@ -151,12 +155,86 @@ $dataVehicleTypes=$resultVehicleTypes->fetch_all();
                         </div>
                     </div>
 
-                    <div class="row-flex content center">
-                        <input type="submit" value="Search" id="search">
-                        <input type="reset" value="Reset" id="reset">
+                    <div class="row-flex content center button-container">
+                        <input type="submit" class="button-bg" value="Search" id="search" style="margin-right:8px;">
+                        <input type="reset" class="button-bg" value="Reset" id="reset">
                     </div>
                 </form>
             </div>
+
+            <!------------------- -->
+            <div class="content" style="background-color:rgba(0,0,0,0.7);">
+                <form action="../controller/homecontroller.php" method="post">
+                    <div class="row-flex">
+                        <div class="col-6">
+                            <div class="content right" >
+                                Vehicle Type
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="content">
+                                <select name="vehiType" id="vehiType">
+                                    <option value="NULL" disabled selected>Choose a type</option>
+                                    
+                                <?php
+                                    foreach ($dataVehicleTypes as $data) {
+                                ?>
+                                    <option value="<?=$data[0]?>"><?=$data[0]?></option>
+                                <?php                                    
+                                    }
+                                ?>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row-flex">
+                        <div class="col-6">
+                            <div class="content right">
+                                Max Passenger Count
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="content">
+                                <input type="number" name="passenger-count" id="passenger-count" disabled>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row-flex">
+                        <div class="col-6">
+                            <div class="content right">
+                                Reservation From
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="content">
+                                <input type="date" name="time-from" id="time-from">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row-flex">
+                        <div class="col-6">
+                            <div class="content right">
+                                Reservation Until
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="content">
+                            <input type="date" name="time-to" id="time-to">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row-flex content center button-container">
+                        <input type="submit" class="button-bg" value="Search" id="search" style="margin-right:8px;">
+                        <input type="reset" class="button-bg" value="Reset" id="reset">
+                    </div>
+                </form>
+            </div>
+            
+            <!-- -->
 
         </section>
         

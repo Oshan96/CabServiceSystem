@@ -93,7 +93,7 @@ body {
     justify-content: center;
 }
 
-input[type=text], input[type=password], input[type=search] {
+input[type=text], input[type=password], input[type=search], input[type=number], input[type=date], select {
     border: 2px solid transparent;
     border-radius: 0.2em;
     background-color: transparent;

@@ -95,7 +95,7 @@ if(isset($_SESSION['user_role'])) {
                             //redirect to relevant page
                             switch(request.responseText) {
                                 case 'admin' :{
-                                    window.location = './adminNew.html';
+                                    window.location = './adminNew.php';
                                 } break;   //need to set session
                                 default : {
                                     window.location = './home.php';

@@ -34,12 +34,13 @@ $connection->close();
 function addUser() {
     $username = $_POST['username'];
     $password = $_POST['pass'];
+    $address = $_POST['address'];
     $name = $_POST['name'];
     $dob = $_POST['dob'];
     $nic = $_POST['nic'];
     $role = $_POST['role'];
 
-    $query = "INSERT INTO users VALUES('$username','$password','$name','$dob','$nic','$role')";
+    $query = "INSERT INTO users VALUES('$username','$password','$name','$address','$dob','$nic','$role')";
 
     return $connection->query($query);
 

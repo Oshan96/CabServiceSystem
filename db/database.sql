@@ -15,6 +15,7 @@ CREATE TABLE users (
     username VARCHAR(15) PRIMARY KEY,
     pass VARCHAR(15) NOT NULL,
     fullname VARCHAR(35) NOT NULL,
+    address VARCHAR(100) NOT NULL,
     dob DATE NOT NULL,
     nic VARCHAR(12) NOT NULL,
     user_role VARCHAR(10) NOT NULL,
@@ -80,6 +81,7 @@ INSERT INTO users VALUES(
     'admin',
     'admin',
     'Oshan Mendis',
+    'No. 80/1, Galle Rd, Pinwatta, Panadura',
     '1996-06-14',
     '961660483V',
     'admin'
@@ -88,6 +90,7 @@ INSERT INTO users VALUES(
     'ucsc',
     'ucsc',
     'UCSC',
+    'Colombo 07',
     '1963-05-22',
     '636758756V',
     'customer'
